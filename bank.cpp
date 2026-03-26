@@ -16,6 +16,16 @@ double deposit;
     cin >> deposit;
     balance = balance + deposit;
     cout << "Deposit successful! New balance: $" << balance << endl;
+    double withdraw;
+    cout << "Enter withdraw amount: ";
+    cin >> withdraw;
+    
+    if (withdraw <= balance) {
+        balance = balance - withdraw;
+        cout << "Withdraw successful! Remaining: $" << balance << endl;
+    } else {
+        cout << "Error: Not enough money!" << endl;
+    }
     
     return 0;
 }
